@@ -103,10 +103,15 @@ h1{
 }
 
 @media (max-width: 767px){
+	div {
+		margin-left: 1%;
+	}
 #p1{
 
 	width  : 100%;
 	margin-bottom: 15px;
+
+
 
 }
 #p2{
