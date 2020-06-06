@@ -51,3 +51,9 @@ margin-top: 8px;
 .navbar-toggler{
 	float: right;
 }
+
+@media (min-width: 	575px){
+	#btn{
+		display: 	none;	
+	}
+}
