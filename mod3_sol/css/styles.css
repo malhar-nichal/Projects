@@ -52,7 +52,7 @@ margin-top: 8px;
 	float: right;
 }
 
-@media (min-width: 	575px){
+@media (min-width: 	768px){
 	#btn{
 		display: 	none;	
 	}
