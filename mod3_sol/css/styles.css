@@ -1,0 +1,53 @@
+body {
+	background-color: grey;
+	margin : 1px;
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+
+
+div h1{
+	padding: 20px;
+	font-size: 28px;
+	margin-left: 5px;
+}
+
+.item{
+	border: 1px solid black;
+	text-align: center; 
+
+}
+
+.re{
+	color: #000000;
+}
+.content {
+	
+	font-size: 17px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #001a00;
+	
+}
+
+.section1{
+	margin-top: 10px;
+	background-color: #E4F3E9;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+.secondheading{
+padding: 5px;
+font-size: 25px;
+margin-top: 8px;
+}
+
+
+.navbar-toggler{
+	float: right;
+}
