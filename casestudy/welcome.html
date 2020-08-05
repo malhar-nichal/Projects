@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+<div id="content">
+	
+</div>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script type="text/javascript">
+	
+	var user = Cookies.get ("username"); 
+	document.getElementById ("content").innerHTML = "<h1> Welcome Back , " + user + "</h1>" ; 
+</script>
+</body>
+</html>
