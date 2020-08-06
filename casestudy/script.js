@@ -24,7 +24,7 @@ var content = document.getElementById ("contentError")	;
 
 
 
-	if (username=="LTI"  && password=="123"     ){
+	if (username=="LTI"  && password=="123" ){
 		Cookies.set("username", username, {expires:1});
 		if (check){
 			console.log (check);
@@ -38,6 +38,8 @@ var content = document.getElementById ("contentError")	;
 } 
 else {
 		content.innerHTML= " <h5>Invalid Username/Password. Try Again! </h5>"; 
+		document.getElementById ("username").value= ''; 
+		document.getElementById ("password").value =''; 
 }}); 
 	
 } ); 
