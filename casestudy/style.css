@@ -6,20 +6,37 @@
 h5{
 	color: red; 
 }
-
-div{
-	margin: 10px;
+div {
+	padding: 10px;
 }
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border : thick solid #000000;
+  width: 25%  	
+
+}
+
+.content .row {
+
+margin-left: 10%;
+font-size: 1.1em ;
+
+}
+
 span{
 	margin-left: 10px;
 }
 #checkbox {
 	margin-right : 10px;
 }
-body {
-	margin-left: 15px;
-}
+
 
 button {
+	font-size: 1.1em ; 
 	margin-left: 60px;
+	margin-left:40%; 
 }
