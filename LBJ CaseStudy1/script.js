@@ -24,7 +24,7 @@ var content = document.getElementById ("contentError")	;
 
 
 
-	if (username=="LTI"  && password=="123" ){
+	if ((username=="LTI" || username ==”lti”)   && password=="123" ){
 		Cookies.set("username", username, {expires:1});
 		if (check){
 			console.log (check);
