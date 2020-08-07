@@ -24,7 +24,7 @@ var content = document.getElementById ("contentError")	;
 
 
 
-	if ((username=="LTI" || username ==”lti”)   && password=="123" ){
+	if ((username=="LTI" || username =='lti')   && password=="123" ){
 		Cookies.set("username", username, {expires:1});
 		if (check){
 			console.log (check);
@@ -32,7 +32,7 @@ var content = document.getElementById ("contentError")	;
 			Cookies.set("password", password, {expires:1});
 		}	
 
-		localStorage.setItem ("username", username); 
+		
 		window.location.href = "welcome.html"; 
 	window.open ("welcome.html"); 
 } 
