@@ -1,0 +1,91 @@
+body {
+font-family: 'Arima Madurai', cursive;
+font-family: 'Libre Baskerville', serif;
+background-color: #61122f;
+}
+
+.navbar {
+margin : 10px; 
+background-color: #f6b319;
+	
+	font-size: 40px;
+	text-align: center ;  
+	height : 100px; 
+}
+
+h3{
+	font-size: 50px;
+	text-align: center; 
+	margin: 60px;
+	color: white;
+}
+
+#as,#ss,#ds	
+ {
+
+
+margin-top: 0px;
+ 	height: 200px;
+  
+  float: left ;	
+  margin-right: 8px;
+  margin-left: 8px;
+  box-shadow: 0px 0px 15px 2px white  ;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+#as:hover , #ds:hover, #ss:hover {
+	margin-top: -4px;
+	margin-left: -4px;
+
+}
+
+#as span, #ds span, #ss span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+
+footer {
+height: 50px;
+width:200px;
+
+padding-left: 50px; 	
+background-color: maroon;
+font-size: 30px; 
+float: right;
+margin-right:  20PX;
+
+margin-top: 80px;
+}
+
+#as {
+	background-image: url(http://localhost/StudentData/images/add.png) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+
+
+}
+#ds {
+	
+	background-image: url(http://localhost/StudentData/images/database.png)  ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#ss {
+	background-image: url(http://localhost/StudentData/images/search.jfif) ;
+	
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
