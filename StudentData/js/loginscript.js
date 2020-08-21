@@ -28,7 +28,7 @@ var content = document.getElementById ("contentError")	;
 		
 
 		
-	window.open ("indEx.html" , "_self"); 
+	window.open ("webpages/dashboard.html" , "_self"); 
 } 
 else {
 		content.innerHTML= " <h5>Invalid Username/Password. Try Again! </h5>"; 

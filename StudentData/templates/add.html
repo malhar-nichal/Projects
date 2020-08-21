@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Student Detials</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src = "js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/addstyle.css">
+</head>
+<body>
+
+<div class="box">
+
+<div id="left" >
+  <a href="index.html"><i class="material-icons" style="font-size:48px;color:red">arrow_back</i></a>
+	<h1>Add <br>Student<br> Details</h1></div>
+<div id="right" > 
+<form action="../server/add.php" method="post">
+<table>
+	<tr>
+		<td>
+			<span><input type="number" class="inp" name="id" placeholder="Student ID"></span>
+		</td>
+		<td>
+			<span><input class="inp" type="text" name="name" placeholder="Student Name"></span>
+		</td>
+	</tr>
+	<tr>
+		
+		<td><input type="radio" name="gen" value="Male" class="gen"> Male</td><td><input type="radio" name="gen" value="Female" class="gen"> Female</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<span><input class="inp" type="text" name="city" placeholder="City"></span>
+		</td>
+		
+		<td>
+			<span><input type="text" class="inp" name="state" placeholder="State"></span>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<span><input type="email" class="inp" name="email" placeholder="Email" id="mail"></span>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<span><input type="text" class="inp" name="qualification" placeholder="Qualification"	></span>
+		</td>
+	
+		
+		<td>
+			<span><input type="text" name="st" class="inp"  placeholder="Stream"></span>
+		</td>
+	</tr>
+</table>
+<button id="btn" type="submit"> Submit </button>
+</form>
+
+
+
+</div>
+</div>
+</body>
+</html>

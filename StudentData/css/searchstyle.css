@@ -1,0 +1,61 @@
+body {
+font-family: 'Arima Madurai', cursive;
+font-family: 'Libre Baskerville', serif;
+background-color: #ff1d58;
+color: white;
+}
+
+
+.navbar {
+margin : 10px; 
+background-color: #f6b319;
+	
+	font-size: 40px;
+	 text-align: center;
+	height : 100px; 
+}
+
+.navbar>span {
+	position: absolute;
+right: 20px;
+margin-top: -5px;
+}
+
+form {
+
+ 
+margin-left: 03%;
+height: 150px;
+border: 2px solid #3F0C1F;
+width: 94.5%;
+
+}
+td > input {
+	margin-left: 10px;
+}
+td>span  {
+	font-weight: bold;
+	margin-left: 10px;
+	font-size: 30px;
+}
+
+
+
+#btn {
+	 background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+i{margin-top: 0px;
+	margin-left: 0px;
+position: absolute;
+left:0;
+top:0;
+}

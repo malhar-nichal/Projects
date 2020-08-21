@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Search A Student</title>
+	<link rel="stylesheet" type="text/css" href="../css/searchstyle.css">
+	 
+	
+</head>
+<body>
+
+	<div class="navbar">
+		<a href="index.html"><i class="material-icons" style="font-size:48px;color:red">arrow_back</i></a><span>Search</span> </div>	
+	<form  name = "myform" action="../server/search.php" method="post" onsubmit="" >	
+
+
+
+<table>	
+<tr>	
+<td>	<span>	Enter ID to Search </span></td></tr>
+
+<tr>	<td>	<input type="text" name="sid" id="sid"></td></tr>
+</table>
+
+<div>	
+<span>	
+<button id="btn">Submit</button>
+</span>
+</div>
+	</form>
+
+	<div id="table"></div>
+	
+
+</body>
+</html>
