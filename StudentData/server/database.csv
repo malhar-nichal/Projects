@@ -1,7 +1,8 @@
 ID ,Name,Gender ,City,State ,Email,Qualification,Stream
 1,Malhar,Male,Mumbai,Maharashtra,malhar1498@gmail.com,Eng,Electronics
-2,Yogita,Female,Mumbai,Maharashtra,malhar1498@gmail.com,MA,Arts
-3,Kusum,Female,Mumbai,Maharashtra,ksusum@gmail.com,Doctor,Medical
-4,Ashok,Male,Navi Mumbai,Maharashtra,malhar1498@gmail.com,Doctor,Medical
-5,Bala,Male,Mumbai,Maharashtra,malhar1498@gmail.com,Graduate,MSC
-6,Rutik,Male,Sangole,Maharashtra,rutik1498@gmail.com,Matric,Medical
+2,Yogita,female,Mumbai,Maharashtra,yogita@gmail.com,ma,arts
+3,Kusum,male,Mumbai,Maharashtra,ksusum@gmail.com,Doctor,Medical
+4,Ashok,Male,Navi Mumbai,Maharashtra,ashok@gmail.com,Doctor,Medical
+5,Pratik,Male,Mumbai,Maharashtra,pratik @gmail.com,Graduate,MSC
+6,Rutik,Male,Sangole,Maharashtra,rutik@gmail.com,Matric,Medical
+9,Kunal,Male,Ahamadnagar,Maharashtra,kunal@gmail.com,Graduate,Electronics
