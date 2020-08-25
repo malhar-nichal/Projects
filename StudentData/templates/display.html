@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display records</title>
+	 <meta charset="utf-8" name="viewport" 
+        content= "width=device-width, initial-scale=1.0"> 	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<script type="text/javascript" src = "../js/bootstrap.js"></script>
+	<meta charset="utf-8" name="viewport" 
+        content= "width=device-width, initial-scale=1.0">
+        <style type="text/css">
+        	body{
+				background-color: #a28089; 
+				color: black;
+			}
+
+			#student {
+		  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 95%;
+		  margin-top: 100px;
+		  font-size: 20px;
+
+		}
+
+		#student td, #student th {
+		  border: 3px solid #ddd;
+		  padding: 8px;
+		}
+		#student tr:nth-child(even){background-color: #f2f2f2;}
+
+
+		#student tr:nth-child(even){background-color: #f2f2f2;}
+
+		#student tr:nth-child(odd){background-color: #grey;}
+
+
+		#student tr:hover {background-color: #ddd;}
+
+		#student th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #4CAF50;
+		  color: white;
+		}
+
+		h1 {
+			float: left;
+			margin-top: 10px;
+			margin-left: 30px;
+			margin-bottom: 60px;
+		}
+		i{
+			float: left;
+		margin-top: 10px;
+		left:0;
+		top:0;
+		}	
+        </style>
+</head>
+<body>
+	<div><span><a href="../templates/index.html"><i class="material-icons" style="font-size:48px;color:red">arrow_back</i></a><h1>Student's Database </h1></span></div>
+
+<div id="result">
+ </div>
+
+<script type="text/javascript">
+	
+	document.addEventListener ("DOMContentLoaded", function (){
+
+		event.preventDefault();
+		var xhr  = new XMLHttpRequest () ;
+		 xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("result").innerHTML = this.responseText;
+      }
+    };
+    	
+		xhr.open ("post", " ../server/display.php");
+		xhr.send ();  
+		
+
+	}); 
+</script>
+
+</body>
+</html>

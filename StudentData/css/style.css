@@ -58,13 +58,11 @@ margin-top: 0px;
 footer {
 height: 50px;
 width:200px;
-
 padding-left: 50px; 	
 background-color: maroon;
 font-size: 30px; 
 float: right;
 margin-right:  20PX;
-
 margin-top: 80px;
 }
 
@@ -72,12 +70,8 @@ margin-top: 80px;
 	background-image: url(../images/add.png) ;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	
-
-
 }
 #ds {
-	
 	background-image: url(../images/database.png)  ;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -85,7 +79,6 @@ margin-top: 80px;
 
 #ss {
 	background-image: url(../images/search.jfif) ;
-	
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }

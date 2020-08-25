@@ -1,7 +1,8 @@
 <?php 
 	
-
-	$file = fopen ("database.csv" ,"a"); 
+ if 	( true ){
+ 
+	$file = fopen ("database.csv" ,"r"); 
 	$id = $_POST['id'];
 	$name = $_POST['name'];
 	$gen = $_POST ['gen'];
@@ -10,110 +11,64 @@
 	$email = $_POST['email']; 
 	$qualification = $_POST['qualification'];
 	$stream = $_POST['st'];
+	$found= false; 
+	while (($data=fgetcsv($file,100,',') )!== FALSE ){
 
+		if ($id == $data[0]){
+			 
+			$found = True;
+
+			break;
+		}
+	}
+	fclose($file);
+	$file = fopen ("database.csv" ,"a");
+
+
+	if (!$found){
 	$data = array ($id,$name, $gen, $city, $state,$email,$qualification,$stream); 
 	fputcsv ($file, $data); 
-	$suc = TRUE; 
-	fclose($file); 
-
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Add a Student Detials</title>
-	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script type="text/javascript" src = "js/bootstrap.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/addstyle.css">
-</head>
-<body>
-
-<div class="box">
-
-<div id="left" >
-<a href="../templates/index.html"><i class="material-icons" style="font-size:48px;color:red">arrow_back</i></a>
-	<h1>Add <br>Student<br> Details</h1></div>	
-<div id="right" > 
-<form action="add.php" method="post">
-<table>
-	<tr>
-		<td>
-			<span><input type="number" class="inp" name="id" placeholder="Student ID"></span>
-		</td>
-		<td>
-			<span><input class="inp" type="text" name="name" placeholder="Student Name"></span>
-		</td>
-	</tr>
-	<tr>
-		
-		<td><input type="radio" name="gen" value="Male" class="gen"> Male</td><td><input type="radio" name="gen" value="Female" class="gen"> Female</td>
-	</tr>
-	<tr>
-		
-		<td>
-			<span><input class="inp" type="text" name="city" placeholder="City"></span>
-		</td>
-		
-		<td>
-			<span><input type="text" class="inp" name="state" placeholder="State"></span>
-		</td>
-	</tr>
-	<tr>
-		
-		<td>
-			<span><input type="email" class="inp" name="email" placeholder="Email" id="mail"></span>
-		</td>
-
-	</tr>
-	<tr>
-		<td>
-			<span><input type="text" class="inp" name="qualification" placeholder="Qualification"	></span>
-		</td>
+	 
 	
-		
-		<td>
-			<span><input type="text" name="st" class="inp"  placeholder="Stream"></span>
-		</td>
-	</tr>
-</table>
-<button id="btn" type="submit"> Submit </button>
-</form>
+	}
 
 
 
-<div  class="container" >
-<table  id="student">
-		
+	fclose($file); 
+}
+ 
+if (!$found){
 
-<?php
-if (TRUE){
+echo "<h1>Data Added Successfully</h1>"	.
+'<table id= "student"><thead>'.
+ '<tr>'.
+ '<td>Student ID</td>'.
+ '<td>Student Name</td>'.
+ '<td>Gender</td>'.
+ '<td>City</td>'.
+ '<td>State</td>'.
+ '<td>Email</td>'.
+ '<td>Qualification</td>'.
+ '<td>Stream</td>'.
+ '</tr>'.
+ '</thead><tbody>'.
 
-echo "<h1>Data Added Successfully</h1>"	;
-echo'<thead>'; 
-echo '<tr>';
-echo '<td>Student ID</td>';
-echo '<td>Student Name</td>';
-echo '<td>Gender</td>';
-echo '<td>City</td>';
-echo '<td>State</td>';
-echo '<td>Email</td>';
-echo '<td>Qualification</td>';
-echo '<td>Stream</td>';
-echo '</tr>';
-echo '</thead>';
+ '<tr>'.
 
-echo '<tr>';
-
-echo "<td>".$data[0]."</td>"; 
-echo "<td>".$data[1]."</td>"; 
-echo "<td>".$data[2]."</td>"; 
-echo "<td>".$data[3]."</td>"; 
-echo "<td>".$data[4]."</td>"; 
-echo "<td>".$data[5]."</td>"; 
-echo "<td>".$data[6]."</td>"; 
-echo "<td>".$data[7]."</td>";
-echo "</tr>";
+ "<td>".$data[0]."</td>". 
+ "<td>".$data[1]."</td>". 
+ "<td>".$data[2]."</td>". 
+ "<td>".$data[3]."</td>". 
+"<td>".$data[4]."</td>".
+ "<td>".$data[5]."</td>". 
+ "<td>".$data[6]."</td>". 
+ "<td>".$data[7]."</td>".
+ "</tr> </tbody></table>";
+}
+else{
+echo "<h1>Student ID is already present in database.</h1>"	;
 } 
+
 ?>
 
 
@@ -125,5 +80,81 @@ echo "</tr>";
 	
 </div>
 </div>
+
+
+<script type="text/javascript">
+	
+
+		function validate () {
+		var valid = true; 
+		var alpha = new RegExp ("^[a-zA-Z ]+$");
+		var name = document.getElementById ("name").value;
+		var conname = document.getElementById ("conname"); 
+		var concity = document.getElementById ("concity");
+		var city = document.getElementById ("city").value;
+		var state = document.getElementById ("state").value;
+		var constate = document.getElementById ("constate");
+		var qualification = document.getElementById ("qualification").value;
+		var conql = document.getElementById ("conql"); 
+		var stream = document.getElementById ("stream").value;
+		var consst = document.getElementById ("consst"); 
+		
+		conname.innerHTML= ""; 
+		concity.innerHTML= ""; 
+		constate.innerHTML= ""; 
+		conql.innerHTML= ""; 
+		consst.innerHTML= ""; 
+
+
+
+		if (!( alpha.test (name) )){
+			
+			conname.innerHTML = "Only Alphabets are allowed"; 
+			valid = false; 
+
+		}
+
+
+		
+		
+		 
+		if (!( alpha.test (city) )){
+			
+			concity.innerHTML = "Only Alphabets are allowed"; 
+			valid = false; 
+
+		}
+
+
+
+ 
+		if (!( alpha.test (state) )){
+			console.log (alpha.test (state)); 
+			constate.innerHTML = "Only Alphabets are allowed"; 
+			valid = false; 
+
+		}
+
+
+
+		if (!( alpha.test (qualification) )){
+					conql.innerHTML = "Only Alphabets are allowed"; 
+					valid = false; 
+
+				}
+		
+			
+		if (!( alpha.test (stream) )){
+					consst.innerHTML = "Only Alphabets are allowed"; 
+					valid = false; 
+
+				}
+				return valid ; 
+	} 
+
+
+	
+
+</script>
 </body>
 </html>
